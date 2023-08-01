@@ -1,0 +1,31 @@
+{
+  "name": "@entva/browserslist-config",
+  "description": "Browserslist shared config",
+  "author": "Max Degterev <max@degterev.me>",
+  "license": "MIT",
+  "repository": "entva/browserslist-config",
+  "bugs": "https://github.com/entva/browserslist-config/issues",
+  "version": "1.0.0",
+  "keywords": [
+    "browserslist",
+    "browserslist-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "LICENSE"
+  ],
+  "scripts": {
+    "reinstall": "rm -rf node_modules package-lock.json && npm install",
+    "supported-browsers": "node scripts/supported.js",
+    "validate": "node scripts/validate.js",
+    "lint": "eslint .",
+    "check": "npm run lint && npm run validate",
+    "prepublishOnly": "npm run check"
+  },
+  "devDependencies": {
+    "browserslist": "^4.21.10",
+    "eslint": "^8.46.0",
+    "eslint-config-entva-base": "^1.0.0"
+  }
+}
